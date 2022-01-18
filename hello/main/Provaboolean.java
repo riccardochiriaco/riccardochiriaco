@@ -24,7 +24,10 @@ public class Provaboolean {
         //importo libreria di una finestra dialogo
         String vototx = JOptionPane.showInputDialog("inserisci la media dei voti: ");
         //conversione in intero la stringa vototx
-        myvoto = Integer.parseInt(vototx);
+        boolean lode = vototx.equalsIgnoreCase("10 e lode");
+        
+        if(!lode)
+            myvoto = Integer.parseInt(vototx);
 
         //condizione di una fascia numerica compresa tra 0 e 10
         if (!(myvoto >= 0 && myvoto <= 10)) {
@@ -48,6 +51,7 @@ public class Provaboolean {
                 } else {
                     if (myvoto >= 9 && myvoto <= 10) {
                         System.out.println("Sei ottimo!!!");
+                        if (lode) System.out.println("CON LODE");
                     }
 
                 }
